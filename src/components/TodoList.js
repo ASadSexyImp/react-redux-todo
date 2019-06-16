@@ -2,21 +2,20 @@ import React from "react";
 import propTypes from "prop-types";
 import Todo from "./Todo"; // Todo引き継ぎ
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, toggleTodo }) => {
   return (
     <ul>
-      {/* 受け取ったtodo Componentを渡す */}
       {todos.map(todo => (
-        <Todo key={todo.id} {...todo} />
+        <Todo key={todo.id} {...todo} onClick={() => toggleTodo(todo.id)} />
       ))}
     </ul>
   );
 
   TodoList.propTypes = {
-    todos: propTypes.arrayOF(
-      propTypes.shape({
-        id: propTypes.number.isRequired,
-        text: propTypes.string.isRequired
+    todos: PropTypes.arrayOF(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        text: PropTypes.string.isRequired
       }).isRequired
     ).isRequired
   };
