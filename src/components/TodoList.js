@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import Todo from "./Todo"; // Todo引き継ぎ
 
 const TodoList = ({ todos, toggleTodo }) => {

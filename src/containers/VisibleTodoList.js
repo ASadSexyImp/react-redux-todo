@@ -2,6 +2,10 @@ import { connect } from "react-redux";
 import TodoList from "../components/TodoList";
 import { toggleTodo } from "../actions";
 
+const mapStateToProps = state => {
+  return { todos: state.todos };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     toggleTodo: id => {
@@ -11,7 +15,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 const VisibleTodoList = connect(
-  mapStateToPorops,
+  mapStateToProps,
   mapDispatchToProps
 )(TodoList);
 
