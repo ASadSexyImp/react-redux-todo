@@ -3,12 +3,16 @@ import FilterLink from "../containers/FilterLink";
 
 const Footer = () => {
   return (
-    <p>
-      Show: <FilterLink filter="SHOW_ALL">All</FilterLink>
-      {", "}
-      <FilterLink filter="SHOW_ACTIVE">Active</FilterLink>
-      {", "}
-      <FilterLink filter="SHOW_COMPLETED">Completed</FilterLink>
+    <p className="foot">
+      <FilterLink filter="SHOW_ALL">
+        <button>All</button>
+      </FilterLink>
+      <FilterLink filter="SHOW_ACTIVE">
+        <button>Active</button>
+      </FilterLink>
+      <FilterLink filter="SHOW_COMPLETED">
+        <button>Completed</button>
+      </FilterLink>
     </p>
   );
 };
