@@ -6,6 +6,10 @@
 ### `git clone https://github.com/ASadSexyImp/react-redux-todo.git`
 リポジトリをクローンしてきます。
 
+
+### `cd react-redux-todo`
+リポジトリ階層に入ります
+
 ### `npm install`
 必要なパッケージなどをインストールします。
 
