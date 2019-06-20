@@ -1,5 +1,5 @@
 import { combineReducers } from "redux"; // reduxを使う
-import todos from "./todo";
+import todos from "./Todo";
 import visibilityFilter from "./visibilityFilter";
 
 const todoApp = combineReducers({ todos, visibilityFilter }); // reducersをまとめる
